@@ -12,6 +12,16 @@
     setTimeout(function () { window.location = "https://play.google.com/store/search?q=biosync&c=apps"; }, 25);
     window.location = "twitter://";
   </script> 
+  
+  <script>
+    window.addEventListener('hashchange', doSomethingWithChangeFunction);
+    
+    function doSomethingWithChangeFunction () {
+      let urlParam = window.location.hash; // Get new hash value
+      console.log('new hash val', urlParam)
+      // ... Do something with new hash value
+    };
+  </script>
 
 <!-- <script>
 function myFunction() {
