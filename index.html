@@ -14,13 +14,10 @@
   </script> 
   
   <script>
-    window.addEventListener('onbeforeunload', doSomethingWithChangeFunction);
-    
-    function doSomethingWithChangeFunction () {
-      let urlParam = window.location.hash; // Get new hash value
+    $(window).bind('beforeunload', function(){
+      let urlParam = window.location
       console.log('new hash val', urlParam)
-      // ... Do something with new hash value
-    };
+    });
   </script>
 
 <!-- <script>
