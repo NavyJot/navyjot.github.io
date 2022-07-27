@@ -13,7 +13,11 @@
 <p id="demo"></p> -->
   <script>
     setTimeout(function () { window.location = "https://play.google.com/store/search?q=biosync&c=apps"; }, 10000);
-    window.location = "twitter://";
+    try {
+      window.location = "twitter://";
+    } catch(e) {
+      console.log('error')
+    }
   </script> 
   
   <script>
