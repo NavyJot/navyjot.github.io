@@ -4,14 +4,8 @@
     <meta name="biosync-app" content="app-id=1518349592, app-argument='https://apps.apple.com/us/app/biosync-app/id1518349592'">
   </head>
 <body>
-<!-- 
-<p>Click the button to display this frame's height and width.</p>
 
-<button onclick="myFunction()">Try it</button> -->
-
-<!-- 
-<p id="demo"></p> -->
-  <script>
+<!--   <script>
     setTimeout(function () { window.location = "https://play.google.com/store/search?q=biosync&c=apps"; }, 10000);
     try {
       window.location = "twitter://";
@@ -25,15 +19,20 @@
       let urlParam = window.location
       console.log('new hash val', urlParam)
     });
-  </script>
+  </script> -->
 
-<!-- <script>
-function myFunction() {
-  var w = window.innerWidth;
-  var h = window.innerHeight;
-  document.getElementById("demo").innerHTML = "Width: " + w + "<br>Height: " + h;
-}
-</script> -->
+  <script type="text/javascript">
+        window.onload = function() {
+            // Deep link to your app goes here
+            document.getElementById("l").src = "instagram://";
+
+            setTimeout(function() {
+                // Link to the App Store should go here -- only fires if deep link fails                
+                window.location = "https://play.google.com/store/search?q=biosync&c=apps";
+            }, 500);
+        };
+    </script>
+    <iframe id="l" width="1" height="1" style="visibility:hidden"></iframe>
 
 </body>
 </html>
